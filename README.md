@@ -41,6 +41,28 @@ Finally, install pyndri:
 
 The instructions for macOS as similar to those for Linux. You most likely want to install a modern version of Python, GCC and the development package of zlib using [Homebrew](https://brew.sh/) or [MacPorts](https://www.macports.org/).
 
+The following instructions would work on macOS Sierra:
+
+First, install gcc 5 or later, e.g.:
+
+    brew install gcc-5
+
+To install Indri:
+
+    wget <url-to-indri-5.11.tar.gz>
+    tar xzvf indri-5.11.tar.gz
+    cd indri-5.11
+    make CC="gcc-5 -D_GLIBCXX_USE_CXX11_ABI=0" CXX="g++-5 -D_GLIBCXX_USE_CXX11_ABI=0"
+    sudo make install CC="gcc-5 -D_GLIBCXX_USE_CXX11_ABI=0" CXX="g++-5 -D_GLIBCXX_USE_CXX11_ABI=0"
+
+To install pyndri (tested with an Anaconda python 3.5 environment):
+
+    git clone https://github.com/cvangysel/pyndri.git
+    cd pyndri
+    CC=gcc-5 CXX=g++-5 python setup.py build
+    CC=gcc-5 CXX=g++-5 python setup.py install
+
+
 ### Windows + [Cygwin](https://www.cygwin.com/) (experimental)
 
 To get Indri running under Windows with Cygwin, a small adjustment needs to be made to the above instructions. First, you probably want to install the [apt-cyg](https://github.com/transcode-open/apt-cyg) package manager and install a modern version of Python, GCC and the zlib development package.
