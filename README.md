@@ -49,7 +49,7 @@ First, install gcc 5 or later, e.g.:
 
 To install Indri:
 
-    wget <url-to-indri-5.11.tar.gz>
+    download Indri from here: https://sourceforge.net/projects/lemur/files/lemur/indri-5.11/indri-5.11.tar.gz/download
     tar xzvf indri-5.11.tar.gz
     cd indri-5.11
     make CC="gcc-5 -D_GLIBCXX_USE_CXX11_ABI=0" CXX="g++-5 -D_GLIBCXX_USE_CXX11_ABI=0"
@@ -167,6 +167,10 @@ We do not provide support for this, as this is a problem with your Python instal
    * Re-compile Python yourself from source.
    * Compile Indri and pyndri with the standard library of your Python distribution. This might be difficult, as the headers are often not included in the distribution.
    * Use the Python executables part of your Linux distribution. Be sure to install the development headers (e.g., `python3.5-dev` using `apt-get` on Ubuntu).
+   
+### Compiling on macOS gives: `g++-5: error: unrecognized command line option '-stdlib=libstdc++'`
+
+This might happen when you first try to compile with clang. An easy (and dirty) solution to this is to delete the Indri folder and re-extract the folder from the tar ball. Then proceed with the rest of the installation instructions normally. 
 
 License
 -------
