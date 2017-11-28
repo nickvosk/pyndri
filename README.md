@@ -45,7 +45,7 @@ The following instructions would work on macOS Sierra:
 
 First, install gcc 5 or later, e.g.:
 
-    brew install gcc-5
+    brew install gcc5
 
 To install Indri:
 
