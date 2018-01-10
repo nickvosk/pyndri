@@ -172,6 +172,18 @@ We do not provide support for this, as this is a problem with your Python instal
 
 This might happen when you first try to compile with clang. An easy (and dirty) solution to this is to delete the Indri folder and re-extract the folder from the tar ball. Then proceed with the rest of the installation instructions normally. 
 
+### Compiling pyndri on macOS gives: `fatal error: antlr/NoViableAltException.hpp`
+
+This is a matter of properly setting the environment variables. For example, you might want to set the environment variables as follows (after installing Indri):
+
+    git clone https://github.com/cvangysel/pyndri.git
+    cd pyndri
+    export CPATH="/usr/local/include/:${CPATH}"
+    export LD_INCLUDE_PATH=/usr/local/lib/
+    export LD_LIBRARY_PATH=/usr/local/lib/
+    CC=gcc-5 CXX=g++-5 python setup.py build
+    CC=gcc-5 CXX=g++-5 python setup.py install
+
 License
 -------
 
