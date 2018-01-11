@@ -144,8 +144,8 @@ If you use pyndri to produce results for your scientific publication, please ref
 	  organization={Springer}
 	}
 
-Frequently Asked Questions
---------------------------
+Frequently Asked Questions (FAQ)
+--------------------------------
 
 ### Importing `pyndri` in Python causes the error `Undefined symbol std::__cxx11::basic_string ...`
 
